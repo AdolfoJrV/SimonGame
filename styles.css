@@ -1,0 +1,141 @@
+body {
+  text-align: center;
+  background-color: #011F3F;
+}
+
+#level-title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 3rem;
+  margin:  5%;
+  color: #FEF2BF;
+}
+
+.container {
+  display: block;
+  width: 100%;
+  margin: auto;
+  background-color: #011F3F;
+}
+
+.btn {
+  /* margin: 25px;
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  border: 10px solid black;
+  border-radius: 20%; */
+  /* filter: drop-shadow(0 0 0.5rem white); */
+  display: inline-block;
+  margin: 0.25%;
+  width: 0;
+  height: 0;
+}
+
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
+
+.displayHidden {
+  visibility: hidden;
+}
+
+.green {
+  /* background-color: green; */
+  filter: drop-shadow(-0.25rem -0.25rem 0.1rem white);
+  position: relative;
+  border-bottom: 250px solid transparent;
+  border-left: 250px solid green;
+  border-top-left-radius: 100%;
+}
+
+.green:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -125px;
+  bottom: -250px;
+  border-bottom: 125px solid transparent;
+  border-left: 125px solid #011F3F;
+  border-top-left-radius: 100%;
+}
+
+.red {
+  /* background-color: red; */
+  filter: drop-shadow(0.25rem -0.25rem 0.1rem white);
+  position: relative;
+  border-bottom: 250px solid transparent;
+  border-right: 250px solid red;
+  border-top-right-radius: 100%;
+}
+
+.red:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 0;
+  top: 125px;
+  border-bottom: 125px solid transparent;
+  border-right: 125px solid #011F3F;
+  border-top-right-radius: 100%;
+}
+
+.yellow {
+  /* background-color: yellow; */
+  filter: drop-shadow(-0.25rem 0.25rem 0.1rem white);
+  position: relative;
+  border-top: 250px solid transparent;
+  border-left: 250px solid yellow;
+  border-bottom-left-radius: 100%;
+}
+
+.yellow:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -125px;
+  top: -250px;
+  border-top: 125px solid transparent;
+  border-left: 125px solid #011F3F;
+  border-bottom-left-radius: 100%;
+}
+
+.blue {
+  /* background-color: blue; */
+  filter: drop-shadow(0.25rem 0.25rem 0.1rem white);
+  position: relative;
+  border-top: 250px solid transparent;
+  border-right: 250px solid blue;
+  border-bottom-right-radius: 100%;
+}
+
+.blue:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 0;
+  top: -250px;
+  border-top: 125px solid transparent;
+  border-right: 125px solid #011F3F;
+  border-bottom-right-radius: 100%;
+}
+
+.pressedGreen {
+  filter: drop-shadow(-2.0rem -2.0rem 1.0rem #7CFC00);
+}
+
+.pressedRed {
+  filter: drop-shadow(2.0rem -2.0rem 1.0rem #FFC0B5);
+}
+
+.pressedYellow {
+  filter: drop-shadow(-2.0rem 2.0rem 1.0rem yellow);
+}
+
+.pressedBlue {
+  filter: drop-shadow(2.0rem 2.0rem 1.0rem #00BFFF);
+}
