@@ -14,12 +14,12 @@ function nextSequence() {
   changeLevel();
 }
 
-function animateSequence(){
-  gamePattern.forEach(function(currentColour, index){
-    setTimeout(function(){
+function animateSequence() {
+  gamePattern.forEach(function(currentColour, index) {
+    setTimeout(function() {
       animateColour(currentColour);
       playSound(currentColour);
-    }, 800*index);
+    }, 800 * index);
   });
 }
 
@@ -50,7 +50,9 @@ function playerPick() {
     userClickedPattern.push(playerPickedColour);
     animateColour(playerPickedColour);
     playSound(playerPickedColour);
-    checkPickedColour();
+    if(gameStarted){
+      checkPickedColour();
+    }
   });
 }
 
@@ -84,14 +86,14 @@ function checkPickedColour() {
 
 function startOver() {
   gamePattern = [];
-  userClickedPattern = [];
   gameStarted = false;
   level = 0;
 }
 
 function main() {
   $("body").keypress(function() {
-    if (!gameStarted) {
+    while (!gameStarted) {
+      userClickedPattern = [];
       nextSequence();
       gameStarted = true;
     }
